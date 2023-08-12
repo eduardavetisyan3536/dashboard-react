@@ -1,0 +1,53 @@
+.Dashboard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+.Dashboard p{
+  font-weight: bold;
+  color: gray;
+}
+.but {
+  text-align: left;
+  width: 170px;
+  position: relative;
+  font-size: 1.2em;
+  padding: 7px 30px;
+  background-color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5em;
+  color: gray;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.514);
+}
+
+.but::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    135deg,
+    rgb(0, 0, 0) 0%,
+    rgb(48, 48, 48) 50%,
+    rgb(143, 143, 143) 50%,
+    rgb(255, 255, 255) 60%
+  );
+  border-radius: 0 0 0.5em 0;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.but:hover::before {
+  width: 1.6em;
+  height: 1.6em;
+}
+
+.but:active {
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.514);
+  transform: translate(0.1em, 0.1em);
+}
